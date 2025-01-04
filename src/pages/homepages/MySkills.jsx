@@ -1,5 +1,4 @@
 import { FaLongArrowAltRight } from "react-icons/fa";
-import { Link } from "react-router-dom";
 import SkillCard from "./component/SkillCard";
 import reactIcon from "../../assets/skills/react.png";
 import nodeIcon from "../../assets/skills/nodejs.png";
@@ -56,9 +55,13 @@ const MySkills = () => {
                 modern technologies.
               </p>
             </div>
-            <Link className="btn bg-lime-500 hover:bg-lime-700 text-black mt-5">
-              Learn More <FaLongArrowAltRight />
-            </Link>
+            <button
+            onClick={() => setView(!view)}
+            className="btn  bg-lime-400 text-black hover:bg-lime-600 mt-5"
+          >
+            {view ? "View Less Skills" : "View More Skills"}
+            <FaLongArrowAltRight />
+          </button>
           </div>
           <div className="grid lg:w-1/2 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
             <SkillCard
@@ -114,14 +117,6 @@ const MySkills = () => {
               </>
             )}
           </div>
-        </div>
-        <div className="col-span-4 flex justify-center items-center -mt-10">
-          <button
-            onClick={() => setView(!view)}
-            className="btn  bg-lime-400 text-black hover:bg-lime-600"
-          >
-            {view ? "View Less Skills" : "View More Skills"}
-          </button>
         </div>
       </section>
     </>

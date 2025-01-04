@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import { NavigateContext } from "../../context/NavigateProvider";
-import { Link } from "react-router-dom";
 import { FaFacebook, FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
+import ReactWhatsapp from "react-whatsapp";
 
 const ContactMe = () => {
   const { contactRef } = useContext(NavigateContext);
@@ -56,10 +56,11 @@ const ContactMe = () => {
             <p>Email: Raselmridha792@gmail.com</p>
             <div className="flex items-center gap-2">
               <p>whatsapp: </p>
-              <Link className="btn bg-lime-500 hover:bg-lime-600 text-black text-lg">
+              <button className="btn bg-lime-500 hover:bg-lime-600 text-black text-lg">
                 <FaWhatsapp />
-                Direct Message
-              </Link>
+                <ReactWhatsapp number="8801645072790" message="Hello I want to talk about more"> send message</ReactWhatsapp>
+              </button>
+              
             </div>
             <p className="text-2xl pt-3">Or Social:</p>
             <div className="flex gap-5 py-5">
