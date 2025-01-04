@@ -17,102 +17,113 @@ import daisyIcon from "../../assets/skills/daisyUi.png";
 import pythonIcon from "../../assets/skills/python.png";
 import javaIcon from "../../assets/skills/java.png";
 import photoShop from "../../assets/skills/photoshop.png";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { NavigateContext } from "../../context/NavigateProvider";
 
 const MySkills = () => {
   const [view, setView] = useState(false);
+  const { skillRef } = useContext(NavigateContext);
   return (
     <>
-      <section className="flex flex-col lg:flex-row gap-5 my-20 items-center px-5">
-        <div className="lg:w-1/2">
-          <p className="capitalize text-gray-500 pb-2">my skills</p>
-          <h1 className="text-4xl font-bold">
-            Let’s Explore Popular <br />{" "}
-            <span className="text-lime-500">Skills & Experience</span>
-          </h1>
-          <div className="space-y-2 pt-5">
-            <p>
-              Experienced in building full-stack applications using the MERN
-              stack (MongoDB, Express.js, React.js, Node.js).{" "}
-            </p>
-            Frontend: Proficient in HTML, CSS, Tailwind CSS, DaisyUI, and
-            React.js, focusing on responsive, dynamic UIs and state management
-            with Redux (basic).
-            <p>
-              Backend: Skilled in developing RESTful APIs using Node.js and
-              Express.js, with strong knowledge of MongoDB for NoSQL database
-              management.
-            </p>
-            <p>
-              Authentication & APIs: Familiar with JWT for secure user
-              authentication and Axios for efficient API calls. Dedicated to
-              creating scalable, responsive, and secure web applications using
-              modern technologies.
-            </p>
+      <section className="my-20">
+        <div
+          ref={skillRef}
+          className="flex flex-col lg:flex-row my-20 gap-5  items-center px-5"
+        >
+          <div className="lg:w-1/2">
+            <p className="capitalize text-gray-500 pb-2">my skills</p>
+            <h1 className="text-4xl font-bold">
+              Let’s Explore Popular <br />{" "}
+              <span className="text-lime-500">Skills & Experience</span>
+            </h1>
+            <div className="space-y-2 pt-5">
+              <p>
+                Experienced in building full-stack applications using the MERN
+                stack (MongoDB, Express.js, React.js, Node.js).{" "}
+              </p>
+              Frontend: Proficient in HTML, CSS, Tailwind CSS, DaisyUI, and
+              React.js, focusing on responsive, dynamic UIs and state management
+              with Redux (basic).
+              <p>
+                Backend: Skilled in developing RESTful APIs using Node.js and
+                Express.js, with strong knowledge of MongoDB for NoSQL database
+                management.
+              </p>
+              <p>
+                Authentication & APIs: Familiar with JWT for secure user
+                authentication and Axios for efficient API calls. Dedicated to
+                creating scalable, responsive, and secure web applications using
+                modern technologies.
+              </p>
+            </div>
+            <Link className="btn bg-lime-500 hover:bg-lime-700 text-black mt-5">
+              Learn More <FaLongArrowAltRight />
+            </Link>
           </div>
-          <Link className="btn bg-lime-500 hover:bg-lime-700 text-black mt-5">
-            Learn More <FaLongArrowAltRight />
-          </Link>
+          <div className="grid lg:w-1/2 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+            <SkillCard
+              icons={reactIcon}
+              title={"React Js"}
+              parcentage={"90%"}
+            />
+            <SkillCard icons={nodeIcon} title={"Node Js"} parcentage={"85%"} />
+            <SkillCard
+              icons={expressIcon}
+              title={"Express Js"}
+              parcentage={"80%"}
+            />
+            <SkillCard icons={mongoIcon} title={"MongoDB"} parcentage={"85%"} />
+            <SkillCard icons={jsIcon} title={"JavaScript"} parcentage={"85%"} />
+            <SkillCard
+              icons={firebaseIcon}
+              title={"firebase"}
+              parcentage={"95%"}
+            />
+            <SkillCard
+              icons={tailwindIcon}
+              title={"TailWind css"}
+              parcentage={"95%"}
+            />
+            <SkillCard icons={daisyIcon} title={"daisyUi"} parcentage={"95%"} />
+            {view && (
+              <>
+                <SkillCard icons={jwtIcon} title={"JWT"} parcentage={"90%"} />
+                <SkillCard icons={htmlIcon} title={"HTML"} parcentage={"85%"} />
+                <SkillCard icons={cssIcon} title={"CSS3"} parcentage={"85%"} />
+                <SkillCard
+                  icons={reduxIcon}
+                  title={"redux"}
+                  parcentage={"exploring"}
+                />
+                <SkillCard
+                  icons={nextIcon}
+                  title={"Next Js"}
+                  parcentage={"basic"}
+                />
+                <SkillCard
+                  icons={pythonIcon}
+                  title={"Python"}
+                  parcentage={"70%"}
+                />
+                <SkillCard icons={javaIcon} title={"Java"} parcentage={"40%"} />
+                <SkillCard
+                  icons={photoShop}
+                  title={"photoShop"}
+                  parcentage={"75%"}
+                />
+              </>
+            )}
+          </div>
         </div>
-        <div className="grid lg:w-1/2 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
-          <SkillCard icons={reactIcon} title={"React Js"} parcentage={"90%"} />
-          <SkillCard icons={nodeIcon} title={"Node Js"} parcentage={"85%"} />
-          <SkillCard
-            icons={expressIcon}
-            title={"Express Js"}
-            parcentage={"80%"}
-          />
-          <SkillCard icons={mongoIcon} title={"MongoDB"} parcentage={"85%"} />
-          <SkillCard icons={jsIcon} title={"JavaScript"} parcentage={"85%"} />
-          <SkillCard
-            icons={firebaseIcon}
-            title={"firebase"}
-            parcentage={"95%"}
-          />
-          <SkillCard
-            icons={tailwindIcon}
-            title={"TailWind css"}
-            parcentage={"95%"}
-          />
-          <SkillCard icons={daisyIcon} title={"daisyUi"} parcentage={"95%"} />
-          {view && (
-            <>
-              <SkillCard icons={jwtIcon} title={"JWT"} parcentage={"90%"} />
-              <SkillCard icons={htmlIcon} title={"HTML"} parcentage={"85%"} />
-              <SkillCard icons={cssIcon} title={"CSS3"} parcentage={"85%"} />
-              <SkillCard
-                icons={reduxIcon}
-                title={"redux"}
-                parcentage={"exploring"}
-              />
-              <SkillCard
-                icons={nextIcon}
-                title={"Next Js"}
-                parcentage={"basic"}
-              />
-              <SkillCard
-                icons={pythonIcon}
-                title={"Python"}
-                parcentage={"70%"}
-              />
-              <SkillCard icons={javaIcon} title={"Java"} parcentage={"40%"} />
-              <SkillCard
-                icons={photoShop}
-                title={"photoShop"}
-                parcentage={"75%"}
-              />
-            </>
-          )}
+        <div className="col-span-4 flex justify-center items-center -mt-10">
+          <button
+            onClick={() => setView(!view)}
+            className="btn  bg-lime-400 text-black hover:bg-lime-600"
+          >
+            {view ? "View Less Skills" : "View More Skills"}
+          </button>
         </div>
       </section>
-      <div className="col-span-4 flex justify-center items-center -mt-10">
-        <button
-          onClick={() => setView(!view)}
-          className="btn  bg-lime-400 text-black hover:bg-lime-600"
-        >
-          {view ? "View Less Skills" : "View More Skills"}
-        </button>
-      </div>
     </>
   );
 };

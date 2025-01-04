@@ -1,9 +1,12 @@
 import { FaDownload, FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 import banner from "../../assets/banner1.png";
+import { useContext } from "react";
+import { NavigateContext } from "../../context/NavigateProvider";
 const Banner = () => {
+  const {homeRef} = useContext(NavigateContext)
   return (
     <>
-        <div className="max-w-screen-2xl mx-auto">
+        <div ref={homeRef} className="max-w-screen-2xl mx-auto">
           <div className="flex flex-col-reverse lg:flex-row px-5 min-h-screen my-32 lg:my-5 items-center justify-between gap-10">
             <div className="lg:w-3/4">
               <div className="md:text-5xl text-3xl space-y-3">

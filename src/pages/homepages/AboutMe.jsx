@@ -1,9 +1,13 @@
+import { useContext } from "react";
 import { FaCoffee, FaMusic, FaPenAlt, FaPlaneDeparture } from "react-icons/fa";
+import { NavigateContext } from "../../context/NavigateProvider";
 
 const AboutMe = () => {
+  const {aboutRef} = useContext(NavigateContext)
+
   return (
     <>
-      <div className="bg-black rounded-lg">
+      <div ref={aboutRef} className="bg-zinc-900 rounded-lg">
         <h1 className="text-3xl md:text-5xl text-lime-400 text-center pt-10 pb-5 uppercase font-bold">
           About me
         </h1>

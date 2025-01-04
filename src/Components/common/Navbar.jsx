@@ -1,15 +1,18 @@
 import { FaDownload } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import logo from '../../../public/ReactDeveloper.png'
+import { useContext } from "react";
+import { NavigateContext } from "../../context/NavigateProvider";
 
 const Navbar = () => {
+  const {scrollToAbout, homeRef, aboutRef, skillRef, contactRef} = useContext(NavigateContext)
   const links = (
     <>
       <div className="flex gap-5 text-lg flex-col lg:flex-row">
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/about">About</NavLink>
-        <NavLink to="/service">Service</NavLink>
-        <NavLink to="/portfolio">Home</NavLink>
-        <NavLink to="/Contact">Contact</NavLink>
+        <NavLink onClick={()=>scrollToAbout(homeRef)} to="/">Home</NavLink>
+        <NavLink onClick={()=>scrollToAbout(aboutRef)}>About</NavLink>
+        <NavLink onClick={()=>scrollToAbout(skillRef)}>Skills</NavLink>
+        <NavLink onClick={()=>scrollToAbout(contactRef)}>Contact</NavLink>
       </div>
     </>
   );
@@ -41,7 +44,7 @@ const Navbar = () => {
               {links}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">RASELMRIDHA</a>
+          <Link onClick={()=>scrollToAbout(homeRef)} to="/"><img className="w-64" src={logo} alt="" /></Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
