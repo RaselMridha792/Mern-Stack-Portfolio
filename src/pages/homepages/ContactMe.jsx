@@ -36,7 +36,7 @@ const ContactMe = () => {
   };
   return (
     <>
-      <section ref={contactRef} className="bg-zinc-900 px-5 py-10 my-20 text-gray-400">
+      <section ref={contactRef} className="bg-zinc-900 px-5 py-10 my-20 text-gray-400 max-w-screen-2xl mx-auto">
         <h1 className="md:text-5xl text-3xl capitalize text-lime-500 font-bold text-center py-5">
           contact me
         </h1>

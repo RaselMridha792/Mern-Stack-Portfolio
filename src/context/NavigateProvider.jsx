@@ -8,6 +8,7 @@ const NavigateProvider = ({children}) => {
       const homeRef = useRef(null);
       const skillRef = useRef(null);
       const contactRef = useRef(null);
+      const portfolioRef = useRef(null);
     
       const scrollToAbout = (ref) => {
         ref.current.scrollIntoView({ behavior: "smooth" });
@@ -20,6 +21,7 @@ const NavigateProvider = ({children}) => {
         skillRef,
         contactRef,
         scrollToAbout,
+        portfolioRef
 
     }
     return (

@@ -3,7 +3,7 @@ import banner from "../../assets/banner1.png";
 import { useContext } from "react";
 import { NavigateContext } from "../../context/NavigateProvider";
 const Banner = () => {
-  const {homeRef} = useContext(NavigateContext)
+  const {homeRef, contactRef, scrollToAbout} = useContext(NavigateContext)
   return (
     <>
         <div ref={homeRef} className="max-w-screen-2xl mx-auto">
@@ -48,7 +48,7 @@ const Banner = () => {
                 </a>
               </div>
               <div>
-                <button className="btn bg-lime-400 text-black hover:bg-lime-600">
+                <button onClick={() => scrollToAbout(contactRef)} className="btn bg-lime-400 text-black hover:bg-lime-600">
                   Hire Me
                 </button>
                 <a

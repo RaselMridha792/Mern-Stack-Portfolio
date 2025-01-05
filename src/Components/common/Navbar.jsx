@@ -1,18 +1,29 @@
 import { FaDownload } from "react-icons/fa";
-import { Link, NavLink } from "react-router-dom";
-import logo from '../../../public/ReactDeveloper.png'
+import { Link, NavLink, useLocation } from "react-router-dom";
+import logo from "../../../public/ReactDeveloper.png";
 import { useContext } from "react";
 import { NavigateContext } from "../../context/NavigateProvider";
 
 const Navbar = () => {
-  const {scrollToAbout, homeRef, aboutRef, skillRef, contactRef} = useContext(NavigateContext)
+  const { scrollToAbout, homeRef, aboutRef, skillRef, contactRef, portfolioRef } =
+    useContext(NavigateContext);
+  const location = useLocation();
+  const homeDirectory = location.pathname === "/";
+  console.log(homeDirectory);
   const links = (
     <>
       <div className="flex gap-5 text-lg flex-col lg:flex-row">
-        <NavLink onClick={()=>scrollToAbout(homeRef)} to="/">Home</NavLink>
-        <NavLink onClick={()=>scrollToAbout(aboutRef)}>About</NavLink>
-        <NavLink onClick={()=>scrollToAbout(skillRef)}>Skills</NavLink>
-        <NavLink onClick={()=>scrollToAbout(contactRef)}>Contact</NavLink>
+        <NavLink onClick={() => scrollToAbout(homeRef)} to="/">
+          Home
+        </NavLink>
+        <NavLink onClick={() => scrollToAbout(aboutRef)}>About</NavLink>
+        <NavLink onClick={() => scrollToAbout(skillRef)}>Skills</NavLink>
+        <NavLink onClick={() => scrollToAbout(portfolioRef)}>Portfolio</NavLink>
+        {!homeDirectory ? (
+          <NavLink to="/contact">Contact</NavLink>
+        ) : (
+          <NavLink onClick={() => scrollToAbout(contactRef)}>Contact</NavLink>
+        )}
       </div>
     </>
   );
@@ -44,7 +55,9 @@ const Navbar = () => {
               {links}
             </ul>
           </div>
-          <Link onClick={()=>scrollToAbout(homeRef)} to="/"><img className="w-64" src={logo} alt="" /></Link>
+          <Link onClick={() => scrollToAbout(homeRef)} to="/">
+            <img className="w-64" src={logo} alt="" />
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>

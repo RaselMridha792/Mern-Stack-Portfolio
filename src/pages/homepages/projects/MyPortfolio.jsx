@@ -1,11 +1,15 @@
+import { useContext } from "react";
 import ProjectCard from "./ProjectCard";
 import useLoadProject from "./useLoadProject";
+import { NavigateContext } from "../../../context/NavigateProvider";
 
 const MyPortfolio = () => {
+    const {portfolioRef } =
+      useContext(NavigateContext);
   const { projects } = useLoadProject();
   return (
     <>
-      <section className="my-20">
+      <section ref={portfolioRef} className="my-20">
         <div className="py-10 md:flex items-center">
           <div className="">
             <h1 className="md:text-5xl border-l-4 border-lime-500 pl-5 text-3xl py-2 mb-3 text-white font-bold">

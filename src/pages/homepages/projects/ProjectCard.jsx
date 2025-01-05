@@ -1,17 +1,11 @@
 import { FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const ProjectCard = ({ project }) => {
   const {
     project_name,
     project_image,
-    live_site,
-    github_link,
-    description,
-    challenges,
-    technology,
-    limitation,
-    improvment,
-    estimated_time,
+    _id,
   } = project;
 
   return (
@@ -21,14 +15,14 @@ const ProjectCard = ({ project }) => {
         <img className="h-96 object-cover w-full" src={project_image} alt="" />
         
         {/* Dark overlay on the image with opacity */}
-        <div className="absolute inset-0 bg-black opacity-0 hover:opacity-50 transition-opacity duration-300 flex flex-col justify-center items-center">
+        <Link to={`/project/details/${_id}`} className="absolute inset-0 bg-black opacity-0 hover:opacity-50 transition-opacity duration-300 flex flex-col justify-center items-center">
           <p className="text-lime-500 text-3xl -rotate-45 hover:rotate-0 duration-500 hover:bg-lime-500 hover:text-black p-3 border rounded-full">
             <FaArrowRight />
           </p>
           <p className="text-2xl text-white">
           see details
           </p>
-        </div>
+        </Link>
       </div>
 
       <div className="mt-10 mb-3 gap-5 flex flex-wrap *:text-xs">
