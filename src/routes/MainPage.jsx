@@ -3,6 +3,7 @@ import Navbar from "../Components/common/Navbar";
 import Footer from "../Components/common/Footer";
 
 const MainPage = () => {
+
     return (
         <>
             <Navbar></Navbar>

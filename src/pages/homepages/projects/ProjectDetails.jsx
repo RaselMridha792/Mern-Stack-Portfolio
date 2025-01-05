@@ -18,7 +18,7 @@ const ProjectDetails = () => {
   } = data;
   return (
     <>
-      <section className="my-40 min-h-screen max-w-screen-2xl mx-auto px-5">
+      <section className="my-32 min-h-screen max-w-screen-2xl mx-auto px-5">
         <div className="flex flex-col gap-2">
           <h1 className="text-center md:text-4xl text-2xl font-bold">
             {project_name}
@@ -29,7 +29,10 @@ const ProjectDetails = () => {
             next project or job.
           </p>
           <div className="flex items-center justify-center mt-5">
-            <Link to='/contact' className="btn bg-lime-500 text-black hover:bg-lime-600">
+            <Link
+              to="/contact"
+              className="btn bg-lime-500 text-black hover:bg-lime-600"
+            >
               <LuSend />
               Hire Me
             </Link>
@@ -75,34 +78,36 @@ const ProjectDetails = () => {
           <img className="lg:w-4/6 rounded-lg" src={project_image} alt="" />
         </div>
         <div className="my-10">
-            <h1 className="md:text-4xl text-2xl pb-5">Project Summary</h1>
-            <hr />
-            <p className="pt-3">{description}</p>
+          <h1 className="md:text-4xl text-2xl pb-5">Project Summary</h1>
+          <hr />
+          <p className="pt-3">{description}</p>
         </div>
         <div className="my-10">
-            <h1 className="md:text-4xl text-2xl pb-5">Technology Used</h1>
-            <hr />
-            <p className="pt-3">{technology}</p>
+          <h1 className="md:text-4xl text-2xl pb-5">Technology Used</h1>
+          <hr />
+          <p className="pt-3">{technology}</p>
         </div>
         <div className="my-10">
-            <h1 className="md:text-4xl text-2xl pb-5">Challenges</h1>
-            <hr />
-            <p className="pt-3">{challenges}</p>
+          <h1 className="md:text-4xl text-2xl pb-5">Challenges</h1>
+          <hr />
+          <p className="pt-3">{challenges}</p>
         </div>
         <div className="my-10">
-            <h1 className="md:text-4xl text-2xl pb-5">Improvment Needed</h1>
-            <hr />
-            <p className="pt-3">{improvment}</p>
+          <h1 className="md:text-4xl text-2xl pb-5">Improvment Needed</h1>
+          <hr />
+          <p className="pt-3">{improvment}</p>
         </div>
         <div className="my-10">
-            <h1 className="md:text-4xl text-2xl pb-5">Limitation</h1>
-            <hr />
-            <p className="pt-3">{limitation}</p>
+          <h1 className="md:text-4xl text-2xl pb-5">Limitation</h1>
+          <hr />
+          <p className="pt-3">{limitation}</p>
         </div>
         <div className="my-10">
-            <h1 className="md:text-4xl text-2xl pb-5">Applying Improvements and Fixing Limitations</h1>
-            <hr />
-            <p className="pt-3">{estimated_time}</p>
+          <h1 className="md:text-4xl text-2xl pb-5">
+            Applying Improvements and Fixing Limitations
+          </h1>
+          <hr />
+          <p className="pt-3">{estimated_time}</p>
         </div>
       </section>
     </>

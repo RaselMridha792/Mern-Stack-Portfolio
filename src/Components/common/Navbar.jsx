@@ -5,8 +5,14 @@ import { useContext } from "react";
 import { NavigateContext } from "../../context/NavigateProvider";
 
 const Navbar = () => {
-  const { scrollToAbout, homeRef, aboutRef, skillRef, contactRef, portfolioRef } =
-    useContext(NavigateContext);
+  const {
+    scrollToAbout,
+    homeRef,
+    aboutRef,
+    skillRef,
+    contactRef,
+    portfolioRef,
+  } = useContext(NavigateContext);
   const location = useLocation();
   const homeDirectory = location.pathname === "/";
   console.log(homeDirectory);
@@ -16,9 +22,15 @@ const Navbar = () => {
         <NavLink onClick={() => scrollToAbout(homeRef)} to="/">
           Home
         </NavLink>
-        <NavLink onClick={() => scrollToAbout(aboutRef)}>About</NavLink>
-        <NavLink onClick={() => scrollToAbout(skillRef)}>Skills</NavLink>
-        <NavLink onClick={() => scrollToAbout(portfolioRef)}>Portfolio</NavLink>
+        {homeDirectory && (
+          <>
+            <NavLink onClick={() => scrollToAbout(aboutRef)}>About</NavLink>
+            <NavLink onClick={() => scrollToAbout(skillRef)}>Skills</NavLink>
+            <NavLink onClick={() => scrollToAbout(portfolioRef)}>
+              Portfolio
+            </NavLink>
+          </>
+        )}
         {!homeDirectory ? (
           <NavLink to="/contact">Contact</NavLink>
         ) : (

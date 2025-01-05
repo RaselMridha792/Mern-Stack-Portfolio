@@ -7,13 +7,13 @@ const AboutMe = () => {
 
   return (
     <>
-      <div ref={aboutRef} className="bg-zinc-900 rounded-lg">
+      <div ref={aboutRef} className="bg-zinc-900 rounded-lg px-2">
         <h1 className="text-3xl md:text-5xl text-lime-400 text-center pt-10 pb-5 uppercase font-bold">
           About me
         </h1>
         <hr className="border-lime-400 md:w-2/3 mx-auto" />
         <div className="flex py-20 flex-col lg:flex-row lg:gap-40 gap-10 justify-evenly items-center">
-          <div className="md:flex-grow-1">
+          <div className="flex-grow-1">
             <div className="relative px-5">
               <div className="z-10 relative">
                 <img
@@ -25,7 +25,7 @@ const AboutMe = () => {
               <div className="h-72 -top-10 left-10 absolute w-64 border-8 border-lime-400"></div>
             </div>
           </div>
-          <div className="md:flex-1">
+          <div className="flex-1">
             <h1 className="text-4xl pb-5">Front-End Web Developer</h1>
             <p className="text-gray-400">
               Hi! I’m Rasel Mridha, a passionate MERN stack developer with
@@ -57,7 +57,7 @@ const AboutMe = () => {
               <h1 className="text-3xl md:text-4xl text-center md:text-left text-lime-400 py-5 uppercase font-bold">
                 My Interest In
               </h1>
-              <div className="flex gap-10 pb-5 items-center justify-left">
+              <div className="flex flex-wrap gap-10 pb-5 items-center justify-left">
                 <div className="flex flex-col items-center">
                   <div className="hover:shadow-2xl hover:scale-110 hover:shadow-lime-400 hover:bg-lime-400 duration-300 rounded-full">
                     <p className="text-3xl border p-3 rounded-full border-lime-400 text-lime-400 hover:text-gray-500">

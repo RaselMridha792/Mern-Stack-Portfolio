@@ -31,7 +31,7 @@ const MySkills = () => {
         >
           <div className="lg:w-1/2">
             <p className="capitalize text-gray-500 pb-2">my skills</p>
-            <h1 className="text-4xl font-bold">
+            <h1 className="md:text-4xl text-2xl font-bold">
               Let’s Explore Popular <br />{" "}
               <span className="text-lime-500">Skills & Experience</span>
             </h1>

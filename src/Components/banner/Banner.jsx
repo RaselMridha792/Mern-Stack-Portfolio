@@ -7,7 +7,7 @@ const Banner = () => {
   return (
     <>
         <div ref={homeRef} className="max-w-screen-2xl mx-auto">
-          <div className="flex flex-col-reverse lg:flex-row px-5 min-h-screen md:my-32 mb-10 lg:my-5 items-center md:justify-between gap-10">
+          <div className="flex flex-col-reverse lg:flex-row px-5 min-h-screen md:my-32 my-20 lg:my-5 items-center md:justify-between gap-10">
             <div className="lg:w-3/4">
               <div className="md:text-5xl text-3xl space-y-3">
                 <h1 className="text-gray-600 text-5xl">Hello, I`m</h1>
