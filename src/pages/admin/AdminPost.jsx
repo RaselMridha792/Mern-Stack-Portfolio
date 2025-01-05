@@ -28,7 +28,7 @@ const AdminPost = () => {
       estimated_time,
     };
     axios
-      .post("http://localhost:5000/projects", projectData, {
+      .post("https://portfolio-server-site-kappa.vercel.app/projects", projectData, {
         headers: {
           "Content-Type": "application/json",
         },

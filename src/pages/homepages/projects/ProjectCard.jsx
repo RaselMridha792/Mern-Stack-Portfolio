@@ -12,7 +12,7 @@ const ProjectCard = ({ project }) => {
     <div className="relative bg-zinc-800 p-5 hover:shadow-lime-500 hover:shadow-xl rounded-xl duration-1000">
       {/* Image with dark overlay on hover */}
       <div className="relative">
-        <img className="h-96 object-cover w-full" src={project_image} alt="" />
+        <img className="md:h-96 md:object-cover w-full" src={project_image} alt="" />
         
         {/* Dark overlay on the image with opacity */}
         <Link to={`/project/details/${_id}`} className="absolute inset-0 bg-black opacity-0 hover:opacity-50 transition-opacity duration-300 flex flex-col justify-center items-center">
