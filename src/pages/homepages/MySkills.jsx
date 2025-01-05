@@ -35,7 +35,7 @@ const MySkills = () => {
               Let’s Explore Popular <br />{" "}
               <span className="text-lime-500">Skills & Experience</span>
             </h1>
-            <div className="space-y-2 pt-5">
+            <div className="space-y-2 pt-5 text-gray-400">
               <p>
                 Experienced in building full-stack applications using the MERN
                 stack (MongoDB, Express.js, React.js, Node.js).{" "}

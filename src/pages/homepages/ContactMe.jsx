@@ -36,14 +36,14 @@ const ContactMe = () => {
   };
   return (
     <>
-      <section ref={contactRef} className="bg-zinc-900 px-5 py-10 my-20">
+      <section ref={contactRef} className="bg-zinc-900 px-5 py-10 my-20 text-gray-400">
         <h1 className="md:text-5xl text-3xl capitalize text-lime-500 font-bold text-center py-5">
           contact me
         </h1>
         <div className="flex flex-col lg:flex-row gap-20 items-center justify-between">
           <div className="flex-1 space-y-2">
             <p className="text-gray-500">Get In Touch</p>
-            <h1 className="text-4xl">
+            <h1 className="text-4xl text-white">
               <span className="text-lime-500">Let`s Talk</span> About More
             </h1>
             <p className="pb-10">
@@ -52,7 +52,7 @@ const ContactMe = () => {
               hello, I`d love to hear from you. Let`s connect and create
               something amazing together!
             </p>
-            <h1 className="text-2xl">Find Me Here:</h1>
+            <h1 className="text-2xl text-white">Find Me Here:</h1>
             <p>Email: Raselmridha792@gmail.com</p>
             <div className="flex items-center gap-2">
               <p>whatsapp: </p>

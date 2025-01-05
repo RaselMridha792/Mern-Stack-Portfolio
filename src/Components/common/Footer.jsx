@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <>
       <footer className="bg-base-300">
-        <section className="footer max-w-screen-2xl mx-auto text-white p-10">
+        <section className="footer max-w-screen-2xl mx-auto text-gray-400 p-10">
           <nav className="h-full flex flex-col justify-center">
             <img className="w-80" src={logo} alt="" />
           </nav>

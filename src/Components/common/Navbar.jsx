@@ -51,7 +51,7 @@ const Navbar = () => {
         </div>
         <div className="navbar-end">
           <a
-            href="/public/cv.pdf"
+            href="./cv.pdf"
             title="Download CV pdf"
             download={"rasel_mridha_cv.pdf"}
             className="btn btn-secondary"

@@ -11,9 +11,9 @@ const AboutMe = () => {
         <h1 className="text-3xl md:text-5xl text-lime-400 text-center pt-10 pb-5 uppercase font-bold">
           About me
         </h1>
-        <hr className="border-lime-400 w-2/3 mx-auto" />
-        <div className="flex py-20 flex-col lg:flex-row lg:gap-40 gap-10 justify-evenly items-center px-5">
-          <div className="flex-grow-1">
+        <hr className="border-lime-400 md:w-2/3 mx-auto" />
+        <div className="flex py-20 flex-col lg:flex-row lg:gap-40 gap-10 justify-evenly items-center">
+          <div className="md:flex-grow-1">
             <div className="relative px-5">
               <div className="z-10 relative">
                 <img
@@ -25,9 +25,9 @@ const AboutMe = () => {
               <div className="h-72 -top-10 left-10 absolute w-64 border-8 border-lime-400"></div>
             </div>
           </div>
-          <div className="flex-1">
+          <div className="md:flex-1">
             <h1 className="text-4xl pb-5">Front-End Web Developer</h1>
-            <p>
+            <p className="text-gray-400">
               Hi! I’m Rasel Mridha, a passionate MERN stack developer with
               expertise in React, Node.js, MongoDB, Tailwind CSS, and more. I
               specialize in building modern, user-focused web applications that
@@ -39,7 +39,7 @@ const AboutMe = () => {
               ideas to life!
             </p>
             <br />
-            <p>
+            <p className="text-gray-400">
               <span className="text-lime-400 font-bold">Name</span>: Rasel
               Mridha <br />
               <span className="text-lime-400 font-bold">Nationality</span>:

@@ -10,11 +10,11 @@ const Banner = () => {
           <div className="flex flex-col-reverse lg:flex-row px-5 min-h-screen my-32 lg:my-5 items-center justify-between gap-10">
             <div className="lg:w-3/4">
               <div className="md:text-5xl text-3xl space-y-3">
-                <h1 className="text-stone-600 text-5xl">Hello, I`m</h1>
+                <h1 className="text-gray-600 text-5xl">Hello, I`m</h1>
                 <p className="text-lime-400 font-bold">Rasel Mridha</p>
                 <p>MERN Stack Enthusiast</p>
               </div>
-              <p className="py-5 text-stone-500">
+              <p className="py-5 text-gray-500">
                 Creating seamless and engaging web solutions with expertise in
                 React, MongoDB, and Tailwind.
               </p>
@@ -52,7 +52,7 @@ const Banner = () => {
                   Hire Me
                 </button>
                 <a
-                  href="/public/cv.pdf"
+                  href="./cv.pdf"
                   title="Download CV pdf"
                   download={"rasel_mridha_cv.pdf"}
                   className="btn btn-secondary"
